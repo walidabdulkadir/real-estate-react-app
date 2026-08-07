@@ -1,47 +1,65 @@
 import React from "react";
 import heroImage from "../assets/photo/heroImage.png";
 import { FiMapPin, FiHome, FiDollarSign } from "react-icons/fi";
-import { PiCoin } from "react-icons/pi";
 
 function HeroSection() {
   return (
-    <section className=" ml-3 lg:flex justify-center items-center lg:mt-100 md:ml-30">
-      <div className=" absolute md:flex">
-        <div className="sm:mt-10 md:mt-7 lg:mt-5">
-          <h1 className="font-extrabold text-6xl  ">
-            Find Your <br /> Dream Home
-          </h1>
-          <p className="mt-7 text-lg font-medium">
-            Explore our curated selection of exquisite properties meticulously{" "}
-            <br />
-            tailored to your unique dream home vision
-          </p>
-          <button
-            type="button"
-            className="bg-black w-45  text-white text-lg font-bold cursor-pointer p-3 m-7 rounded-md"
-          >
-            sign up
-          </button>
+    <section id="hero" className="w-full bg-[#fef7f2] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Hero Content Row */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 pt-12 pb-6 lg:pt-16 lg:pb-8">
+          {/* Left: Text Block */}
+          <div className="flex-1 text-center lg:text-left">
+            <h1 className="font-black text-4xl sm:text-6xl lg:text-7xl leading-tight tracking-tight text-gray-900">
+              Find Your <br />
+              Dream Home
+            </h1>
+            <p className="mt-4 sm:mt-5 text-sm sm:text-lg text-gray-500 font-medium max-w-md mx-auto lg:mx-0 leading-relaxed">
+              Explore our curated selection of exquisite properties meticulously
+              tailored to your unique dream home vision
+            </p>
+            <button
+              id="hero-signup-btn"
+              className="mt-7 sm:mt-8 bg-black text-white font-bold text-sm sm:text-base px-7 sm:px-8 py-3 sm:py-3.5 rounded-xl hover:bg-gray-800 active:scale-95 transition-all duration-200 cursor-pointer shadow-lg shadow-black/10"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          {/* Right: House Image */}
+          <div className="flex-1 flex justify-center lg:justify-end w-full max-w-sm sm:max-w-md lg:max-w-none">
+            <img
+              src={heroImage}
+              alt="Modern dream home"
+              className="w-full max-w-[260px] sm:max-w-sm lg:max-w-lg xl:max-w-xl object-contain drop-shadow-2xl"
+            />
+          </div>
         </div>
-        <div className=" ">
-          <img src={heroImage} alt="" className="lg:mt-0" />
-        </div>
-        <div className="flex justify-center items-center md:absolute bottom-0 left-50 top-155">
-          <div className="grid grid-cols-2  w-87 h-auto mr-3 mb-15 rounded-2xl border-none bg-[#ddc7bb] sm:grid-cols-2 sm:w-100 md:grid-cols-4 md:w-auto md:h-30 ">
-            <div className="flex justify-center items-center gap-9 w-35 bg-white rounded-md py-1 px-2 m-5 text-[#5b473c] font-medium ">
-              Location
-              <FiMapPin size={20} />
+
+        {/* Search Bar */}
+        <div className="pb-12 sm:pb-14 pt-2">
+          <div className="bg-[#e8d5c9] rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shadow-md">
+            {/* Location */}
+            <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3.5 flex-1 cursor-pointer hover:shadow-sm transition-shadow duration-200">
+              <FiMapPin className="text-[#6b4e3d] w-5 h-5 flex-shrink-0" />
+              <span className="text-sm font-medium text-[#6b4e3d]">Location</span>
             </div>
-            <div className="flex justify-center items-center gap-18 w-35 bg-white rounded-md py-1 px-2 m-5 text-[#5b473c] font-medium ">
-              Type
-              <FiHome size={20} />
+            {/* Type */}
+            <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3.5 flex-1 cursor-pointer hover:shadow-sm transition-shadow duration-200">
+              <FiHome className="text-[#6b4e3d] w-5 h-5 flex-shrink-0" />
+              <span className="text-sm font-medium text-[#6b4e3d]">Type</span>
             </div>
-            <div className="flex justify-center items-center gap-4.5 w-35 bg-white rounded-md py-1 px-2 m-5 text-[#5b473c] font-medium ">
-              Price Range
-              <FiDollarSign size={20} />
+            {/* Price Range */}
+            <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3.5 flex-1 cursor-pointer hover:shadow-sm transition-shadow duration-200">
+              <FiDollarSign className="text-[#6b4e3d] w-5 h-5 flex-shrink-0" />
+              <span className="text-sm font-medium text-[#6b4e3d]">Price Range</span>
             </div>
-            <button className="flex justify-center items-center gap-9 w-35  rounded-md py-2 px-2 m-5 text-[white] bg-[#2b1b12] font-medium ">
-              sign up
+            {/* Sign Up CTA */}
+            <button
+              id="search-signup-btn"
+              className="bg-[#1e0f08] text-white text-sm font-semibold px-6 py-3.5 rounded-xl hover:bg-[#2d1a0e] active:scale-95 transition-all duration-200 cursor-pointer whitespace-nowrap w-full sm:w-auto"
+            >
+              Sign Up
             </button>
           </div>
         </div>
