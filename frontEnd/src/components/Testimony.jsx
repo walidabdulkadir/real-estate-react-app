@@ -9,19 +9,17 @@ const stats = [
 
 function Testimony() {
   return (
-    <section id="about" className="w-full bg-white py-16 sm:py-20 lg:py-24">
+    <section id="about" className="w-full bg-[#ffffff] py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Left: Property Image */}
           <div className="flex-1 w-full flex justify-center">
             <img
               src={HeroImage2}
               alt="Beautiful property at dusk"
-              className="w-full max-w-[320px] sm:max-w-md lg:max-w-none rounded-3xl object-cover shadow-xl"
+              className="w-full max-w-[320px] sm:max-w-md lg:max-w-none  object-cover"
             />
           </div>
 
-          {/* Right: Text Content */}
           <div className="flex-1 text-center lg:text-left">
             <h2 className="font-black text-3xl sm:text-4xl text-gray-900 leading-snug tracking-tight">
               We Help You To Find <br />
@@ -33,12 +31,15 @@ function Testimony() {
               becomes a reality.
             </p>
 
-            {/* Stats Row */}
             <div className="mt-10 grid grid-cols-3 gap-4 sm:gap-8">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="font-black text-3xl sm:text-4xl text-gray-900">{stat.value}</p>
-                  <p className="text-xs sm:text-sm text-gray-500 mt-1 font-medium leading-snug">{stat.label}</p>
+                  <p className="font-black text-3xl sm:text-4xl text-gray-900">
+                    {stat.value}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1 font-medium ">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
