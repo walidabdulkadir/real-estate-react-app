@@ -1,35 +1,41 @@
 import home1 from "../../assets/photo/home1.png";
 import home2 from "../../assets/photo/home2.png";
 import home3 from "../../assets/photo/home3.png";
+import profile1 from "../../assets/photo/profile1.png";
+import profile2 from "../../assets/photo/profile2.png";
+import profile3 from "../../assets/photo/profile3.png";
 import star from "../../assets/icons/Star.png";
 
 const testimonials = [
   {
     id: 1,
     img: home1,
+    profile: profile1,
     name: "Sarah Nguyen",
     location: "San Francisco",
     icon: star,
     comment:
-      "Working with Realta was an absolute dream. They found us the perfect home within our budget and made the entire process seamless.",
+      "Dwello truly cares about their clients. They listened to my needs and preferences and helped me find the perfect home in the Bay Area. Their professionalism and attention to detail are unmatched",
   },
   {
     id: 2,
     img: home2,
+    profile: profile2,
     name: "Michael Torres",
     location: "Beverly Hills",
     icon: star,
     comment:
-      "Incredible service from start to finish. The team truly understood what we were looking for and delivered beyond our expectations.",
+      "I had a fantastic experience working with Dwello. Their expertise and personalized service exceeded my expectations. I found my dream home quickly and smoothly. Highly recommended!",
   },
   {
     id: 3,
     img: home3,
+    profile: profile3,
     name: "Emily Johnson",
     location: "Palo Alto",
     icon: star,
     comment:
-      "Realta helped us navigate a competitive market with ease. Professional, responsive, and genuinely caring agents.",
+      "Dwello made my dream of owning a home a reality! Their team provided exceptional support and guided me through every step of the process. I couldn't be happier with my new home!",
   },
 ];
 
